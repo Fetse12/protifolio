@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
+
     <title>Fitsum Teka</title>
 </head>
 <body>
@@ -36,8 +37,8 @@
                             table. I'm excited to be part of a tech industry that's welcoming and <br>full of different ideas .
                         </p>
                         <div class="button" style="margin: 50px 0 50px 50px;"> 
-                            <button id="download" style="font-weight: bold;"> Download Resume</button>
-                            <button id="content" style="margin-left: 30px;font-weight: bold;">Contact</button>
+                            <a class="Read" id="download" style="font-weight: bold;"> Download Resume</a>
+                            <a class="Read" id="content" style="margin-left: 30px;font-weight: bold;">Contact</a>
                         </div>
                         <div class="social">
                             <img src="photos/github-sign.png"  style="height: 25px; margin-right: 15px;" alt="">
@@ -58,7 +59,7 @@
     <br>  <br>
   
  <!--  ========================About section============================== -->
-    <div>
+    <div class="main_About">
         <h1 style="margin-left: 65px;"><img src="photos/user-shape.png" style="height: 30px;margin-right: 10px;"">About Me</h1>
         <div class="about">
             <img id="profile" style="margin-left: 80px;" src="photos/photo_2023-12-20_23-09-26.jpg" alt="">
@@ -68,7 +69,7 @@
                     that help brands grow . I even co-founded Nova Digitals, a social media marketing agency, to help businesses win online<br>
                      with both websites and social media .<br>
                     Let's connect and collaborate to bring your brand to life! </p><br>
-               <p style="font-family: sans-serif;font-weight: bold;">________________________________________________My Skills______________________________________________________</p>
+               <p style="font-family: sans-serif;font-weight: bold;">My Skills</p>
                     
                <div style="display: flex;">
                     <ul>
@@ -98,10 +99,10 @@
 
     </div>
      <!--  ========================My service section============================== -->
- <div style="margin-top: 50px;">
+ <div style="margin-top: 50px;" class="My_service">
         <h1 style="margin-left: 65px;"><img src="photos/settings.png" style="height: 30px;margin-right: 10px;"">My Services</h1>
 
-    <div class="box" style="margin-top: 100px;">
+    <div class="box">
             <div class="card">
                 <img style="height: 100px;"  src="photos/app-development.png" alt="">
                 <h2>Web Development</h2>
@@ -156,7 +157,69 @@
                 </div>
                             
     </div>
-            
- </div>
+</div>
+    <!--  ========================project section============================== -->
+    <div style="height: 900px;" class="project">
+        <h1 style="margin-left: 65px;"><img src="photos/laptop.png" style="height: 30px;margin-right: 10px;"">Project</h1>
+        <div style="margin-top: 150px;" class="pro_box">
+            <div class="pro_card">
+                <div class="work">
+                    <img src="photos/work-1.png" alt="">
+                    <div class="layer">
+                        <h3 >web for suit shop</h3>
+                        <p>This is a practice website for<br>
+                            my web development course. I'm building <br> it to learn and experiment <br> with my new skills.  
+                           <br> Consider it a work in progress!</p>
+                            <a href="https://github.com/Fetse12/Web-for-suit-shop"><img src="photos/icons8-link-48.png" alt=""></a>
+                    </div>
+                </div>  
+                <div class="work">
+                    <img src="photos/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Student managment <br> system</h3>
+                        <p>This student management system <br> is a project for my Java programming <br>course.
+                            It allows you to add, view, <br> and manage student information.</p>
+                            <a href="https://github.com/Fetse12/student-management-system-using-java-"><img src="photos/icons8-link-48.png" alt=""></a>                    </div>
+                </div>  
+                <div class="work">
+                    <img src="photos/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Bank managmnet <br> system</h3>
+                    <p>OOP project <br> Bank management system! It's a practice project to explore concepts 
+                         like classes,<br> objects, and inheritance while simulating <br> real-world banking functionalities.</p>
+                        <a href="#"><img src="photos/icons8-link-48.png" alt=""></a>                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+     <!--  ========================contact section============================== -->
+<div class="all" style="height: 900px;">
+    <h1 style="margin-left: 65px;"><img src="photos/telephone-symbol-button.png" style="height: 30px;margin-right: 10px;">contact</h1>
+    <div class="container">
+
+            <div class="Left">
+                <h3 class="sub_title">Contact me</h3>
+                <p>Fitsumteka2019@gmail.com</p>
+                <P><img src="photos/telephone-symbol-button.png" style="height: 20px;margin-right: 10px;">0923697449</P>
+                <div class="social">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                  </div>
+            </div>
+            <div class="right">
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="Email" placeholder="Email"><br><br>
+                    <input type="number" placeholder="Phone nnumber">
+                    <input type="text" placeholder="subject"><br><br>
+                    <textarea placeholder="Message" rows="5" cols="30"></textarea><br><br>
+                    <a href="" class="Read" >Send Message</a>  
+                </form>
+            </div>
+        </div>    
+</div>
 </body>
 </html>

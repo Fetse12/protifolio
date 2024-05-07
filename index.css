@@ -37,20 +37,8 @@ span{
     color: orangered;
 }
 
-button{
-    background-color: #f9004d;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 9px 22px;
-    border-radius: 30px;
-    transition: .4s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-button:hover{
-    box-shadow: 0px 0px 0px;  
+a:hover{
+    box-shadow: 0px 0px 5px;  
 }
 .social{
     cursor: pointer;
@@ -79,7 +67,7 @@ button:hover{
 
 }
 .box{
-    height: 800px;
+    height: 900px;
     width: 100%;
 }
 .box{
@@ -104,14 +92,105 @@ button:hover{
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 .Read{
-    background-color: #f9004d;
-    color: white;
+    background-color: rgba(244,241,241,255);
+    color: blacke;
     text-decoration: none;
-    border: 2px solid transparent;
     font-weight: bold;
     padding: 9px 22px;
     border-radius: 30px;
     transition: .4s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.pro_card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    margin-top: 50px;
+    margin: 50px 100px 0 300px;
+    
+}
+.work{
+  
+    width: 335px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    }
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+   
+    color: white;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#808080);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: colomun;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    transition: hight 0.5s;
+   
+}
+.layer h3{
+    margin-top: 90px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.layer a img{
+    margin: 50px 100px 0 125px;
+    border-radius: 50%;
+    background:white;
+    height: 60px; width: 60px;
+    align-items: center;
+
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+-----------------------contact---------------------------
+.all{
+    display: flex;
+}
+.container{
+    display: flex;
+}
+.Left{
+    flex-basis: 35%;
+}
+.right{
+    flex-basis: 65%;
+}
+.Left p{
+    margin-top: 30px;
+}
+.social{
+    margin-top: 30px;
+}
+.social a img {
+    text-decoration: none;
+    margin-right: 15px;
+    display: inline-block;
+    height: 25px;
+}
+.social a img:hover{
+    color: blue;
+    transform: translateY(-5px);
 }
