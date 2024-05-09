@@ -1,5 +1,16 @@
+*{
+    scroll-behavior: smooth;
+    transition: .5s;
+}
+
 body{
     background-color: rgba(244,241,241,255);
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 .logo{
     display: flex;
@@ -8,6 +19,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 li {
     list-style-type: none;
@@ -25,8 +37,13 @@ a{
 
 }
 .info{
-margin-top: 15%;
-margin-left: 8%;
+margin-top: 10%;
+
+align-items: center;
+}
+.info div{
+    align-items: center;
+    gap: 100px;
 }
 .info h1{
     font-size: 70px;
@@ -42,9 +59,16 @@ a:hover{
 }
 .social{
     cursor: pointer;
+    display: flex;
+    margin-left: 160px;
+}
+.social div{
+    margin-left: -60px;
+
 }
 .photo{
     display: flex;
+   
 }
 #profile{
    
@@ -54,7 +78,18 @@ a:hover{
     width: 450px;
     border-radius: 100% 39% 100% 64% / 53% 92% 50% 100% ;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin-right: 100px;
 
+}
+.main_About{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.main_About h1{
+    margin-left: -1630px;
 }
 .about{
     margin-top: 100px;
@@ -181,16 +216,19 @@ a:hover{
 .Left p{
     margin-top: 30px;
 }
-.social{
+.media{
     margin-top: 30px;
+    cursor: pointer;
+    display: flex;
+    margin-left:-5px;
 }
-.social a img {
-    text-decoration: none;
+.media div {
+ 
     margin-right: 15px;
-    display: inline-block;
     height: 25px;
 }
-.social a img:hover{
+.media div:hover{
+    text-decoration: none;
     color: blue;
     transform: translateY(-5px);
 }
