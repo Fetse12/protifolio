@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <title>Fitsum Teka</title>
 </head>
 <body>
     <!--  ========================The Home section============================== -->
-    <div class="home">
-        <nav class="nav">
+    <div class="home" id="Home">
+        <nav class="nav" style="position: fixed;">
                 <div class="logo">
                     <img src="photos/Screenshot_from_2024-05-01_14-19-29-removebg-preview(1).png" style="height: 100px;" alt="">
                     <h1 style="margin: 65px 0 40px 0;">Fitsum Teka</h1>
                 </div>
-            <div>
+            <div class="bar">
                 <ul>
-                    <li><a href=""><div><img src="photos/home.png" style="height: 16px;margin-right: 10px;"">Home</div></a></li>
-                    <li><a href="#about"><img src="photos/user-shape.png" style="height: 16px;margin-right: 10px;"">About</a></li>
-                    <li><a href=""><img src="photos/settings.png" style="height: 16px; margin-right: 10px;">My Service</a></li>
-                    <li><a href=""><img src="photos/laptop.png" style="height: 16px;margin-right: 10px;"">Project</a></li> 
-                    <li><a href=""><img src="photos/telephone-symbol-button.png" style="height: 16px;margin-right: 10px;"">Contact</a></li>
+                    <li><a href="#Home"><div><img src="photos/home.png" style="height: 16px;margin-right: 10px;"">Home</div></a></li>
+                    <li><a href="#about"><div><img src="photos/user-shape.png" style="height: 16px;margin-right: 10px;"">About</div></a></li>
+                    <li><a href="#service"><div><img src="photos/settings.png" style="height: 16px; margin-right: 10px;">My Service</div></a></li>
+                    <li><a href="#Project"><div><img src="photos/laptop.png" style="height: 16px;margin-right: 10px;"">Project</div></a></li> 
+                    <li><a href="#Contact"><div><img src="photos/telephone-symbol-button.png" style="height: 16px;margin-right: 10px;"">Contact</div></a></li>
                 </ul>
 
             </div>
@@ -45,10 +45,9 @@
                             <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
                             <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
                             <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-facebook-square'></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-telegram' ></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-instagram' ></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-twitter' ></i></div></a> </div> 
-                        </div>
+                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-telegram'></i></div></a></div>
+                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-instagram'></i></div></a></div>
+                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-twitter' ></i></div></a> </div>            </div>
                     </div>
                     <img id="profile" style="margin-left: 80px;" src="photos/photo_2023-12-20_23-09-26.jpg" alt="">
                 </div>
@@ -60,8 +59,8 @@
     <br>  <br>
   
  <!--  ========================About section============================== -->
-    <div class="main_About" id="about">
-        <h1 ><img src="photos/user-shape.png" style="height: 30px;margin-right: 10px;"">About Me</h1>
+    <div class="main_About" id="about" style="background-color: white; ">
+        <h1 ><img src="photos/user-shape.png" style="height: 30px;margin-right: 10px; margin-top: 30px;"">About Me</h1>
         <div class="about">
             <div>
                 <img id="profile" style="margin-left: 80px;" src="photos/photo_2023-12-20_23-09-26.jpg" alt=""></div>
@@ -71,7 +70,8 @@
                     that help brands grow . I even co-founded Nova Digitals, a social media marketing agency, to help businesses win online<br>
                      with both websites and social media .<br>
                     Let's connect and collaborate to bring your brand to life! </p><br>
-               <p style="font-family: sans-serif;font-weight: bold;">My Skills</p>
+               <p style="font-family: sans-serif;font-weight: bold; font-size: 20px; ">
+                ____________________________My Skills_______________________________</p><br>
                     
                <div style="display: flex;">
                     <ul>
@@ -101,11 +101,11 @@
 
     </div>
      <!--  ========================My service section============================== -->
- <div style="margin-top: 50px;" class="My_service">
-        <h1 style="margin-left: 65px;"><img src="photos/settings.png" style="height: 30px;margin-right: 10px;"">My Services</h1>
+ <div style="margin-top: 50px;" class="My_service" id="service">
+        <h1 style="margin-left: 65px;"><img src="photos/settings.png" style="height: 30px;margin-right: 10px; margin-top: 30px;"">My Services</h1>
 
-    <div class="box">
-            <div class="card">
+    <div class="box ">
+            <div class="card reveal">
                 <img style="height: 100px;"  src="photos/app-development.png" alt="">
                 <h2>Web Development</h2>
                 <div>
@@ -122,7 +122,7 @@
                 </div>
                 
             </div>
-                <div class="card">
+                <div class="card reveal">
                     <img style="height: 100px;"  src="photos/social-media.png" alt="">
                     <h2>Social Media Managment</h2>
                     <div>
@@ -140,7 +140,7 @@
                     </div>
                     
                 </div>
-                <div class="card">
+                <div class="card reveal">
                     <img style="height: 100px;" src="photos/app-development(1).png" alt="">
                     <h2>Mobile App Development</h2>
                     <div>
@@ -161,11 +161,11 @@
     </div>
 </div>
     <!--  ========================project section============================== -->
-    <div style="height: 900px;" class="project">
-        <h1 style="margin-left: 65px;"><img src="photos/laptop.png" style="height: 30px;margin-right: 10px;"">Project</h1>
+    <div style="height: 900px; background-color: white;" class="project" id="Project">
+        <h1 style="margin-left: 65px;"><img src="photos/laptop.png" style="height: 30px;margin-right: 10px; margin-top: 30px;"">Project</h1>
         <div style="margin-top: 150px;" class="pro_box">
             <div class="pro_card">
-                <div class="work">
+                <div class="work reveal">
                     <img src="photos/work-1.png" alt="">
                     <div class="layer">
                         <h3 >web for suit shop</h3>
@@ -175,7 +175,7 @@
                             <a href="https://github.com/Fetse12/Web-for-suit-shop"><img src="photos/icons8-link-48.png" alt=""></a>
                     </div>
                 </div>  
-                <div class="work">
+                <div class="work reveal">
                     <img src="photos/work-2.png" alt="">
                     <div class="layer">
                         <h3>Student managment <br> system</h3>
@@ -183,7 +183,7 @@
                             It allows you to add, view, <br> and manage student information.</p>
                             <a href="https://github.com/Fetse12/student-management-system-using-java-"><img src="photos/icons8-link-48.png" alt=""></a>                    </div>
                 </div>  
-                <div class="work">
+                <div class="work reveal">
                     <img src="photos/work-3.png" alt="">
                     <div class="layer">
                         <h3>Bank managmnet <br> system</h3>
@@ -195,21 +195,23 @@
         </div>
     </div>
      <!--  ========================contact section============================== -->
-<div class="all" style="height: 900px;">
-    <h1 style="margin-left: 65px;"><img src="photos/telephone-symbol-button.png" style="height: 30px;margin-right: 10px;">contact</h1>
-    <div class="container">
+<div class="all" style="height: 900px;" id="Contact">
+    <h1 style="margin-left: 65px;"><img src="photos/telephone-symbol-button.png" style="height: 30px;margin-right: 10px; margin-top: 30px;">contact</h1>
+    <div class="container" >
             <div class="Left">
                 <h3 class="sub_title">Contact me</h3>
-                <p>Fitsumteka2019@gmail.com</p>
-                <P><img src="photos/telephone-symbol-button.png" style="height: 20px;margin-right: 10px;">0923697449</P>
+                <p></p>
+                <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div> <i class='bx bxs-envelope' >     Fitsumteka2019@gmail.com</i></div></a></div>           
+                <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxs-phone-call'>     +251923697449</i></div></a></div>           
                 <div class="media">
                     <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
                     <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
                     <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-facebook-square'></i></div></a></div>
-                    <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-telegram' ></i></div></a></div>
-                    <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-instagram' ></i></div></a></div>
-                    <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-twitter' ></i></div></a> </div> 
-                  </div>
+                    <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-telegram'></i></div></a></div>
+                    <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-instagram'></i></div></a></div>
+                    <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-twitter' ></i></div></a> </div>           
+                </div>
+                 
             </div>
             <div class="right">
                 <form>
@@ -217,23 +219,23 @@
                     <input type="Email" placeholder="Email"><br><br>
                     <input type="text" placeholder="Phone nnumber">
                     <input type="text" placeholder="subject"><br><br>
-                    <textarea placeholder="Message" rows="5" cols="30"></textarea><br><br>
+                    <textarea placeholder="Message" rows="5" cols="30" style="width: 795px;"></textarea><br><br>
                     <a href="" class="Read" >Send Message</a>  
                 </form>
             </div>
         </div>    
 </div>
 </body>
-<footer style=" width: 100%; height: 150px; background-color: rgb(20, 20, 20);">
+<footer style=" width: 100%; height: 150px;background-color: #212121;">
+   
     <div style="text-align: center;">
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-facebook-square'></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-telegram' ></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-instagram' ></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-twitter' ></i></div></a> </div> 
-                 
+        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
+        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
+        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-facebook-square'></i></div></a></div>
+        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-telegram' ></i></div></a></div>
+        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-instagram' ></i></div></a></div>
+        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-twitter' ></i></div></a> </div>           
     </div>
-    <p style="text-align: center;">Copyright &copy; 2024 All rights reserved.Developed by Fitsum</p>
+    <p style="text-align: center; color: white;">Copyright &copy; 2024 All rights reserved.Developed by Fitsum</p>
 </footer>
 </html>
