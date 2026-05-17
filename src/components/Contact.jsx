@@ -56,7 +56,7 @@ const Contact = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <input type="text" name="phone" placeholder="Phone Number" className="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors" />
-              <input type="text" name="_subject" placeholder="Subject" required className="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors" />
+              <input type="text" name="subject" placeholder="Subject" required className="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors" />
             </div>
             <textarea name="message" placeholder="Your Message" rows="5" required className="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors resize-y"></textarea>
             
