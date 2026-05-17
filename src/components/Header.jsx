@@ -30,8 +30,25 @@ const Header = ({ theme, toggleTheme, activeSection }) => {
           ))}
         </ul>
 
-        <button onClick={toggleTheme} className="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Dark Mode">
-          <i className={`bx ${theme === 'light' ? 'bx-moon' : 'bx-sun'}`}></i>
+        <button 
+          onClick={toggleTheme} 
+          className="relative w-14 h-8 rounded-full bg-slate-200 dark:bg-slate-800 transition-colors duration-300 focus:outline-none flex items-center justify-between px-1.5 cursor-pointer shadow-inner border border-light-border dark:border-dark-border"
+          aria-label="Toggle Dark Mode"
+        >
+          {/* Sun icon on the left (light indicator) */}
+          <i className={`bx bx-sun ${theme === 'light' ? 'text-amber-500' : 'text-slate-500'} text-sm z-10 transition-colors`}></i>
+          
+          {/* Moon icon on the right (dark indicator) */}
+          <i className={`bx bx-moon ${theme === 'dark' ? 'text-indigo-400' : 'text-slate-400'} text-sm z-10 transition-colors`}></i>
+          
+          {/* Sliding Indicator Knob */}
+          <span 
+            className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-white dark:bg-slate-900 shadow-md transform transition-transform duration-300 flex items-center justify-center ${
+              theme === 'dark' ? 'translate-x-6' : 'translate-x-0'
+            }`}
+          >
+            <i className={`bx ${theme === 'light' ? 'bx-sun text-amber-500' : 'bx-moon text-indigo-400'} text-xs`}></i>
+          </span>
         </button>
       </div>
     </header>
