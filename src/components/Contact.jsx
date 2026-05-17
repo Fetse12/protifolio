@@ -46,9 +46,9 @@ const Contact = () => {
         </div>
         
         <div className="md:col-span-3">
-          <form action="https://formsubmit.co/fitsumteka2019@gmail.com" method="POST" className="flex flex-col gap-6">
-            <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission!" />
-            <input type="hidden" name="_captcha" value="false" />
+          <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-6">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
             
             <div className="grid md:grid-cols-2 gap-6">
               <input type="text" name="name" placeholder="Your Name" required className="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors" />
