@@ -1,241 +1,357 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="index.js"></script>
+    <meta name="description" content="Fitsum Teka - Software Engineer, Web Developer & Digital Marketer Portfolio">
+    <title>Fitsum Teka | Portfolio</title>
+    
+    <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Fitsum Teka</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        dark: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            border: '#334155',
+                            text: '#f8fafc',
+                            muted: '#94a3b8'
+                        },
+                        light: {
+                            bg: '#f8fafc',
+                            surface: '#ffffff',
+                            border: '#e2e8f0',
+                            text: '#0f172a',
+                            muted: '#475569'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS (for animations) -->
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <!--  ========================The Home section============================== -->
-    <div class="home" id="Home">
-        <nav class="nav" style="position: fixed;">
-                <div class="logo">
-                    <img src="photos/Screenshot_from_2024-05-01_14-19-29-removebg-preview(1).png" style="height: 100px;" alt="">
-                    <h1 style="margin: 65px 0 40px 0;">Fitsum Teka</h1>
-                </div>
-            <div class="bar">
-                <ul>
-                    <li><a href="#Home"><div><img src="photos/home.png" style="height: 16px;margin-right: 10px;"">Home</div></a></li>
-                    <li><a href="#about"><div><img src="photos/user-shape.png" style="height: 16px;margin-right: 10px;"">About</div></a></li>
-                    <li><a href="#service"><div><img src="photos/settings.png" style="height: 16px; margin-right: 10px;">My Service</div></a></li>
-                    <li><a href="#Project"><div><img src="photos/laptop.png" style="height: 16px;margin-right: 10px;"">Project</div></a></li> 
-                    <li><a href="#Contact"><div><img src="photos/telephone-symbol-button.png" style="height: 16px;margin-right: 10px;"">Contact</div></a></li>
-                </ul>
+<body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-300 font-sans overflow-x-hidden">
 
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-light-border dark:border-dark-border transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 text-2xl font-bold">
+                <img src="photos/Screenshot_from_2024-05-01_14-19-29-removebg-preview(1).png" alt="Logo" class="h-10 rounded-full">
+                <span>Fitsum Teka</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex gap-8 items-center font-medium">
+                <li><a href="#Home" class="nav-link relative flex items-center gap-2 hover:text-primary transition-colors"><i class='bx bx-home-alt'></i> Home</a></li>
+                <li><a href="#about" class="nav-link relative flex items-center gap-2 hover:text-primary transition-colors"><i class='bx bx-user'></i> About</a></li>
+                <li><a href="#services" class="nav-link relative flex items-center gap-2 hover:text-primary transition-colors"><i class='bx bx-briefcase-alt-2'></i> Services</a></li>
+                <li><a href="#projects" class="nav-link relative flex items-center gap-2 hover:text-primary transition-colors"><i class='bx bx-laptop'></i> Projects</a></li>
+                <li><a href="#contact" class="nav-link relative flex items-center gap-2 hover:text-primary transition-colors"><i class='bx bx-envelope'></i> Contact</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="Home" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto px-6 pt-32 pb-16 gap-12">
+        <div class="flex-1 text-center md:text-left reveal">
+            <h3 class="text-2xl font-medium text-light-muted dark:text-dark-muted mb-2">Hello, I'm</h3>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">Fitsum <span class="text-primary">Teka</span></h1>
+            <h3 class="text-xl md:text-2xl font-semibold mb-6">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Software Engineer</span> | Web Developer | Digital Marketer
+            </h3>
+            <p class="text-lg text-light-muted dark:text-dark-muted mb-8 max-w-2xl mx-auto md:mx-0">
+                I specialize in building innovative digital solutions, crafting user-centric websites, and driving growth through strategic social media marketing. Let's create something extraordinary together!
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
+                <a href="photos/Fitsum_Teka_Resume.pdf" download class="px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-primary to-secondary hover:-translate-y-1 shadow-lg shadow-primary/30 transition-all duration-300 flex items-center gap-2">
+                    Download Resume <i class='bx bx-download'></i>
+                </a>
+                <a href="#contact" class="px-8 py-3 rounded-full font-semibold text-primary border-2 border-primary hover:bg-primary hover:text-white hover:-translate-y-1 transition-all duration-300">
+                    Let's Talk
+                </a>
             </div>
-        </nav>
-        <div class="info">
-            <div>
-                <div class="photo">
-                    <div>
-                        <h1>I'm <span>Fitsum</span> Teka</h1>
-                        <p style="font-family: sans-serif; font-weight: bold;">Hey I'm a Software Engineering student at Adama Science and Technology University .<br>
-                            Building cool tech stuff is what gets me going! I love figuring out ways to use technology <br> 
-                            to solve problems in the real world. As a man in engineering, I believe everyone deserves <br> a seat at the
-                            table. I'm excited to be part of a tech industry that's welcoming and <br>full of different ideas .
-                        </p>
-                        <div class="button" style="margin: 50px 0 50px 50px;"> 
-                            <a href="photos/Fitsum_Teka_Resume.pdf" download class="Read" id="download" style="font-weight: bold;"> Download Resume</a>
-                            <a href="#Contact" class="Read" id="content" style="margin-left: 30px;font-weight: bold;">Contact</a>
-                        </div>
-                        <div class="social">
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://www.linkedin.com/in/fitsum-teka12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://www.facebook.com/profile.php?id=100027601682822&mibextid=LQQJ4d"><div><i class='bx bxl-facebook-square'></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://t.me/Sheer32"><div><i class='bx bxl-telegram'></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://www.instagram.com/__fitsum_teka_12?igsh=MWdwN3QzOHcyZHNlZQ%3D%3D&utm_source=qr"><div><i class='bx bxl-instagram'></i></div></a></div>
-                            <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://x.com/fitsum49"><div><i class='bx bxl-twitter' ></i></div></a> </div>            </div>
-                    </div>
-                    <img id="profile" style="margin-left: 80px;" src="photos/photo_2023-12-20_23-09-26.jpg" alt="">
-                </div>
+            <div class="flex justify-center md:justify-start gap-4">
+                <a href="https://github.com/Fetse12" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/fitsum-teka12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://x.com/fitsum49" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl"><i class='bx bxl-twitter'></i></a>
+                <a href="https://t.me/Sheer32" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl"><i class='bx bxl-telegram'></i></a>
+                <a href="https://www.instagram.com/__fitsum_teka_12" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl"><i class='bx bxl-instagram'></i></a>
             </div>
+        </div>
         
-        </div>  
-    </div>
-    <br>  <br>
-    <br>  <br>
-  
- <!--  ========================About section============================== -->
-    <div class="main_About" id="about" style="background-color: white; ">
-        <h1 ><img src="photos/user-shape.png" style="height: 30px;margin-right: 10px; margin-top: 30px;"">About Me</h1>
-        <div class="about">
-            <div>
-                <img id="profile" style="margin-left: 80px;" src="photos/photo_2023-12-20_23-09-26.jpg" alt=""></div>
-            <div>
-                <p style="margin-top: 100px; font-family: sans-serif; font-weight: bold;">My name is <span>Fitsum Teka! </span> I'm a software engineering student Alongside my study, I loves building websites <br>that are user-friendly and visually appealing .I'm constantly learning new skills to become a full-stack developer<br>
-                    Social media marketing is another passion of mine ! I love using my tech knowledge to create killer campaigns <br>
-                    that help brands grow . I even co-founded Nova Digitals, a social media marketing agency, to help businesses win online<br>
-                     with both websites and social media .<br>
-                    Let's connect and collaborate to bring your brand to life! </p><br>
-               <p style="font-family: sans-serif;font-weight: bold; font-size: 20px; ">
-                ____________________________My Skills_______________________________</p><br>
-                    
-               <div style="display: flex;">
-                    <ul>
-                        <img style="height:50px;" src="photos/icons8-html-48.png" alt=""><br>
-                        <li style="font-size: 20px;" >HTML</li><br>
-                        <img style="height:50px;" src="photos/icons8-css-100.png" alt=""><br>
-                        <li style="font-size: 20px;">CSS</li><br>
-                        <img style="height:50px;" src="photos/icons8-python-48.png" alt=""><br>
-                        <li style="font-size: 20px;">Python</li><br>
-                        <img style="height:50px;" src="photos/icons8-javascript-48.png" alt=""><br>
-                        <li style="font-size: 20px;">Javascript</li><br>
-                    </ul>
-                    <ul style="margin-left: 200px;">
-                        <img style="height:50px;" src="photos/icons8-react-16.png" alt=""><br>
-                        <li style="font-size: 20px;">React</li><br>
-                        <img style="height:50px;"  src="photos/icons8-nodejs-48.png" alt=""><br>
-                        <li style="font-size: 20px;">Nodejs</li><br>
-                        <img style="height:50px;"  src="photos/icons8-database-64.png" alt=""><br>
-                        <li style="font-size: 20px;">Database(Mysql, Microsoft sql)</li>
-                    </ul>
-                   
-                 </div>
-                    
-                   
+        <div class="flex-1 flex justify-center items-center reveal">
+            <div class="relative w-72 h-72 md:w-96 md:h-96 morph-img-box">
+                <img src="photos/photo_2023-12-20_23-09-26.jpg" alt="Fitsum Teka" class="w-full h-full object-cover morph-img border-8 border-light-surface dark:border-dark-surface shadow-xl relative rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%]">
             </div>
         </div>
+    </section>
 
-    </div>
-     <!--  ========================My service section============================== -->
- <div style="margin-top: 50px;" class="My_service" id="service">
-        <h1 style="margin-left: 65px;"><img src="photos/settings.png" style="height: 30px;margin-right: 10px; margin-top: 30px;"">My Services</h1>
-
-    <div class="box ">
-            <div class="card reveal">
-                <img style="height: 100px;"  src="photos/app-development.png" alt="">
-                <h2>Web Development</h2>
-                <div>
-                    <p >
-                        I have extensive experience in web development, 
-                        having worked on various projects ranging from 
-                        simple static websites to complex web applications. 
-                        I am skilled in HTML, CSS, JavaScript. 
-
-                    </p>
-                    <p style="text-align: center;">
-                        <a href="" class="Read">Read More</a>
-                    </p>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16 flex items-center justify-center gap-3 reveal"><i class='bx bx-user-circle text-primary'></i> About Me</h2>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 reveal w-full">
+                <img src="photos/photo_2023-12-20_23-09-26.jpg" alt="About Fitsum" class="w-full rounded-2xl shadow-lg border border-light-border dark:border-dark-border">
+            </div>
+            <div class="flex-1 reveal">
+                <h3 class="text-2xl font-semibold mb-6">Bridging the gap between <span class="text-primary">Technology</span> & <span class="text-secondary">Marketing</span></h3>
+                <p class="text-light-muted dark:text-dark-muted mb-4 text-lg leading-relaxed">
+                    I am a passionate <strong class="text-light-text dark:text-dark-text">Software Engineering student</strong> at Adama Science and Technology University. I thrive on the intersection of solid backend logic, beautiful frontend design, and impactful digital marketing. 
+                </p>
+                <p class="text-light-muted dark:text-dark-muted mb-8 text-lg leading-relaxed">
+                    As the co-founder of <strong class="text-light-text dark:text-dark-text">Nova Digitals</strong>, a social media marketing agency, I bring a unique perspective to my development work. I don't just build applications; I engineer solutions that are designed to convert, engage, and grow businesses online.
+                </p>
                 
-            </div>
-                <div class="card reveal">
-                    <img style="height: 100px;"  src="photos/social-media.png" alt="">
-                    <h2>Social Media Managment</h2>
-                    <div>
-                        <p >
-                            
-                            I have experiance on Social Media managmnet also 
-                            builds online communities and creates content people love. 
-                            I go beyond just posting – I help you connect with your audience.
-                            With engaging content, I grow your brand and get people talking. 
-                            Data helps me fine-tune my plans for the best results.
-                        </p>
-                        <p style="text-align: center;">
-                            <a href="" class="Read">Read More</a>
-                        </p>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Technical Arsenal</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bxl-html5 text-4xl text-primary'></i>
+                            <span class="font-medium">HTML/CSS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bxl-javascript text-4xl text-primary'></i>
+                            <span class="font-medium">JavaScript</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bxl-react text-4xl text-primary'></i>
+                            <span class="font-medium">React</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bxl-nodejs text-4xl text-primary'></i>
+                            <span class="font-medium">Node.js</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bxl-python text-4xl text-primary'></i>
+                            <span class="font-medium">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bx-data text-4xl text-primary'></i>
+                            <span class="font-medium">Database</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bxl-java text-4xl text-primary'></i>
+                            <span class="font-medium">Java</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-light-surface dark:bg-dark-surface rounded-xl border border-light-border dark:border-dark-border shadow-sm hover:-translate-y-1 hover:border-primary transition-all">
+                            <i class='bx bx-line-chart text-4xl text-primary'></i>
+                            <span class="font-medium">Marketing</span>
+                        </div>
                     </div>
-                    
                 </div>
-                <div class="card reveal">
-                    <img style="height: 100px;" src="photos/app-development(1).png" alt="">
-                    <h2>Mobile App Development</h2>
-                    <div>
-                        <p >
-                            Mobile app developers turn your app vision into reality.
-                            We're problem-solvers who craft user-friendly apps that meet 
-                            your needs. From concept to launch, we design, develop, and 
-                            optimize apps that  boost efficiency and keep users engaged. 
-                            Let's discuss your mobile app idea!
-
-                        </p>
-                        <p style="text-align: center;">
-                            <a href="" class="Read">Read More</a>
-                        </p>
-                    </div>
-                </div>
-                            
-    </div>
-</div>
-    <!--  ========================project section============================== -->
-    <div style="height: 900px; background-color: white;" class="project" id="Project">
-        <h1 style="margin-left: 65px;"><img src="photos/laptop.png" style="height: 30px;margin-right: 10px; margin-top: 30px;"">Project</h1>
-        <div style="margin-top: 150px;" class="pro_box">
-            <div class="pro_card">
-                <div class="work reveal">
-                    <img src="photos/work-1.png" alt="">
-                    <div class="layer">
-                        <h3 >web for suit shop</h3>
-                        <p>This is a practice website for<br>
-                            my web development course. I'm building <br> it to learn and experiment <br> with my new skills.  
-                           <br> Consider it a work in progress!</p>
-                            <a href="https://github.com/Fetse12/Web-for-suit-shop"><img src="photos/icons8-link-48.png" alt=""></a>
-                    </div>
-                </div>  
-                <div class="work reveal">
-                    <img src="photos/work-2.png" alt="">
-                    <div class="layer">
-                        <h3>Student managment <br> system</h3>
-                        <p>This student management system <br> is a project for my Java programming <br>course.
-                            It allows you to add, view, <br> and manage student information.</p>
-                            <a href="https://github.com/Fetse12/student-management-system-using-java-"><img src="photos/icons8-link-48.png" alt=""></a>                    </div>
-                </div>  
-                <div class="work reveal">
-                    <img src="photos/work-3.png" alt="">
-                    <div class="layer">
-                        <h3>Bank managmnet <br> system</h3>
-                    <p>OOP project <br> Bank management system! It's a practice project to explore concepts 
-                         like classes,<br> objects, and inheritance while simulating <br> real-world banking functionalities.</p>
-                        <a href="#"><img src="photos/icons8-link-48.png" alt=""></a>                    </div>
-                </div>  
             </div>
         </div>
-    </div>
-     <!--  ========================contact section============================== -->
-<div class="all" style="height: 900px;" id="Contact">
-    <h1 style="margin-left: 65px;"><img src="photos/telephone-symbol-button.png" style="height: 30px;margin-right: 10px; margin-top: 30px;">contact</h1>
-    <div class="container" >
-            <div class="Left">
-                <h3 class="sub_title">Contact me</h3>
-                <p></p>
-                <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  ><div> <i class='bx bxs-envelope' >     Fitsumteka2019@gmail.com</i></div></a></div>           
-                <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  ><div><i class='bx bxs-phone-call'>     +251923697449</i></div></a></div>           
-                <div class="media">
-                   <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://www.linkedin.com/in/fitsum-teka12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://www.facebook.com/profile.php?id=100027601682822&mibextid=LQQJ4d"><div><i class='bx bxl-facebook-square'></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://t.me/Sheer32"><div><i class='bx bxl-telegram' ></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://www.instagram.com/__fitsum_teka_12?igsh=MWdwN3QzOHcyZHNlZQ%3D%3D&utm_source=qr"><div><i class='bx bxl-instagram' ></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: black;"  href="https://x.com/fitsum49"><div><i class='bx bxl-twitter' ></i></div></a> </div>           
-  </div>
-                 
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16 flex items-center justify-center gap-3 reveal"><i class='bx bx-cog text-primary'></i> My Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-light-surface dark:bg-dark-surface p-8 rounded-2xl border border-light-border dark:border-dark-border shadow-md hover:-translate-y-2 hover:border-primary hover:shadow-xl hover:shadow-primary/10 transition-all text-center group relative overflow-hidden reveal z-10">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                <div class="w-20 h-20 mx-auto bg-light-bg dark:bg-dark-bg rounded-full flex items-center justify-center mb-6 shadow-sm">
+                    <i class='bx bx-code-alt text-4xl text-primary'></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                <p class="text-light-muted dark:text-dark-muted mb-6">Building responsive, scalable, and high-performance websites and web applications tailored to your business needs using modern frameworks.</p>
+                <a href="#contact" class="inline-block px-6 py-2 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors">Discuss Project</a>
             </div>
-            <div class="right">
-                <form>
-                    <input type="text" placeholder="Name">
-                    <input type="Email" placeholder="Email"><br><br>
-                    <input type="text" placeholder="Phone nnumber">
-                    <input type="text" placeholder="subject"><br><br>
-                    <textarea placeholder="Message" rows="5" cols="30" style="width: 795px;"></textarea><br><br>
-                    <a href="" class="Read" >Send Message</a>  
+            
+            <div class="bg-light-surface dark:bg-dark-surface p-8 rounded-2xl border border-light-border dark:border-dark-border shadow-md hover:-translate-y-2 hover:border-primary hover:shadow-xl hover:shadow-primary/10 transition-all text-center group relative overflow-hidden reveal z-10" style="transition-delay: 100ms;">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                <div class="w-20 h-20 mx-auto bg-light-bg dark:bg-dark-bg rounded-full flex items-center justify-center mb-6 shadow-sm">
+                    <i class='bx bx-trending-up text-4xl text-primary'></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Digital Marketing</h3>
+                <p class="text-light-muted dark:text-dark-muted mb-6">Data-driven marketing strategies, content creation, and community management that amplify your brand's voice and drive conversions.</p>
+                <a href="#contact" class="inline-block px-6 py-2 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors">Discuss Strategy</a>
+            </div>
+            
+            <div class="bg-light-surface dark:bg-dark-surface p-8 rounded-2xl border border-light-border dark:border-dark-border shadow-md hover:-translate-y-2 hover:border-primary hover:shadow-xl hover:shadow-primary/10 transition-all text-center group relative overflow-hidden reveal z-10" style="transition-delay: 200ms;">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                <div class="w-20 h-20 mx-auto bg-light-bg dark:bg-dark-bg rounded-full flex items-center justify-center mb-6 shadow-sm">
+                    <i class='bx bx-mobile-alt text-4xl text-primary'></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Mobile Apps</h3>
+                <p class="text-light-muted dark:text-dark-muted mb-6">Designing and developing intuitive mobile experiences that keep users engaged and solve real-world problems efficiently.</p>
+                <a href="#contact" class="inline-block px-6 py-2 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors">Discuss App</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16 flex items-center justify-center gap-3 reveal"><i class='bx bx-layer text-primary'></i> Featured Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-light-surface dark:bg-dark-surface rounded-2xl border border-light-border dark:border-dark-border shadow-md overflow-hidden group hover:-translate-y-2 hover:shadow-xl transition-all reveal">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="photos/work-1.png" alt="Suit Shop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://github.com/Fetse12/Web-for-suit-shop" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-primary hover:text-white transform translate-y-4 group-hover:translate-y-0 transition-all"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Suit Shop E-commerce</h3>
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">HTML</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">CSS</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">JS</span>
+                    </div>
+                    <p class="text-light-muted dark:text-dark-muted">A modern e-commerce front-end designed for a high-end suit retailer. Focuses on premium aesthetics and smooth user interactions.</p>
+                </div>
+            </div>
+
+            <div class="bg-light-surface dark:bg-dark-surface rounded-2xl border border-light-border dark:border-dark-border shadow-md overflow-hidden group hover:-translate-y-2 hover:shadow-xl transition-all reveal" style="transition-delay: 100ms;">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="photos/work-2.png" alt="Student Management System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://github.com/Fetse12/student-management-system-using-java-" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-primary hover:text-white transform translate-y-4 group-hover:translate-y-0 transition-all"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Student Management</h3>
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">Java</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">OOP</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">GUI</span>
+                    </div>
+                    <p class="text-light-muted dark:text-dark-muted">A robust desktop application built to streamline administrative tasks, manage student records, and optimize institutional workflows.</p>
+                </div>
+            </div>
+
+            <div class="bg-light-surface dark:bg-dark-surface rounded-2xl border border-light-border dark:border-dark-border shadow-md overflow-hidden group hover:-translate-y-2 hover:shadow-xl transition-all reveal" style="transition-delay: 200ms;">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="photos/work-3.png" alt="Bank Management System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="#" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-primary hover:text-white transform translate-y-4 group-hover:translate-y-0 transition-all"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Bank Management</h3>
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">Java</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">Architecture</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-light-bg dark:bg-dark-bg text-primary rounded-full">Database</span>
+                    </div>
+                    <p class="text-light-muted dark:text-dark-muted">A comprehensive system simulating real-world banking operations, focusing on secure transactions and object-oriented design principles.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16 flex items-center justify-center gap-3 reveal"><i class='bx bx-envelope-open text-primary'></i> Get In Touch</h2>
+        <div class="bg-light-surface dark:bg-dark-surface border border-light-border dark:border-dark-border rounded-3xl shadow-lg p-8 md:p-12 grid md:grid-cols-5 gap-12 reveal">
+            
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-bold mb-4">Let's work together!</h3>
+                <p class="text-light-muted dark:text-dark-muted mb-8 text-lg">Whether you have a coding project, need marketing advice, or just want to say hi, my inbox is always open.</p>
+                
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-light-bg dark:bg-dark-bg rounded-full flex items-center justify-center text-primary text-2xl shrink-0">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Email</h4>
+                            <span class="text-light-muted dark:text-dark-muted">Fitsumteka2019@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-light-bg dark:bg-dark-bg rounded-full flex items-center justify-center text-primary text-2xl shrink-0">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Phone</h4>
+                            <span class="text-light-muted dark:text-dark-muted">+251 92 369 7449</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-light-bg dark:bg-dark-bg rounded-full flex items-center justify-center text-primary text-2xl shrink-0">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Location</h4>
+                            <span class="text-light-muted dark:text-dark-muted">Adama, Ethiopia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-3">
+                <!-- 
+                  We use Formsubmit.co to handle the email sending without needing a backend server. 
+                  When someone submits this form, it will be emailed to fitsumteka2019@gmail.com.
+                  Note: The very first time you submit this form, Formsubmit will send an email to fitsumteka2019@gmail.com 
+                        asking you to confirm your email address. Once confirmed, all future submissions will go through automatically.
+                -->
+                <form action="https://formsubmit.co/fitsumteka2019@gmail.com" method="POST" class="flex flex-col gap-6">
+                    <!-- Formsubmit settings (optional but recommended) -->
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission!">
+                    <!-- Disable captcha for better UX, or remove to keep it -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors">
+                        <input type="email" name="email" placeholder="Your Email" required class="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="phone" placeholder="Phone Number" class="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors">
+                        <input type="text" name="_subject" placeholder="Subject" required class="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors">
+                    </div>
+                    <textarea name="message" placeholder="Your Message" rows="5" required class="w-full bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-4 rounded-xl outline-none focus:border-primary transition-colors resize-y"></textarea>
+                    
+                    <button type="submit" class="self-start px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-primary to-secondary hover:-translate-y-1 shadow-lg shadow-primary/30 transition-all duration-300 flex items-center gap-2">
+                        Send Message <i class='bx bx-send'></i>
+                    </button>
                 </form>
             </div>
-        </div>    
-</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light-surface dark:bg-dark-surface border-t border-light-border dark:border-dark-border py-12 text-center mt-10">
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="https://github.com/Fetse12" target="_blank" class="text-3xl text-light-muted dark:text-dark-muted hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-1"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/fitsum-teka12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="text-3xl text-light-muted dark:text-dark-muted hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-1"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100027601682822&mibextid=LQQJ4d" target="_blank" class="text-3xl text-light-muted dark:text-dark-muted hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-1"><i class='bx bxl-facebook'></i></a>
+            <a href="https://t.me/Sheer32" target="_blank" class="text-3xl text-light-muted dark:text-dark-muted hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-1"><i class='bx bxl-telegram'></i></a>
+            <a href="https://www.instagram.com/__fitsum_teka_12" target="_blank" class="text-3xl text-light-muted dark:text-dark-muted hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-1"><i class='bx bxl-instagram'></i></a>
+            <a href="https://x.com/fitsum49" target="_blank" class="text-3xl text-light-muted dark:text-dark-muted hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-1"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="text-light-muted dark:text-dark-muted text-sm font-medium">
+            &copy; 2024 Fitsum Teka. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
 </body>
-<footer style=" width: 100%; height: 150px;background-color: #212121;">
-   
-    <div style="text-align: center;">
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://github.com/Fetse12"><div><i class='bx bxl-github'></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://www.linkedin.com/in/fitsum-teka12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><div><i class='bx bxl-linkedin-square'></i></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://www.facebook.com/profile.php?id=100027601682822&mibextid=LQQJ4d"><div><i class='bx bxl-facebook-square'></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://t.me/Sheer32"><div><i class='bx bxl-telegram' ></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://www.instagram.com/__fitsum_teka_12?igsh=MWdwN3QzOHcyZHNlZQ%3D%3D&utm_source=qr"><div><i class='bx bxl-instagram' ></i></div></a></div>
-        <div><a style="font-size: 25px; margin-right: 15px; text-decoration: none; border: none; color: white;"  href="https://x.com/fitsum49"><div><i class='bx bxl-twitter' ></i></div></a> </div>           
-    </div>
-    <p style="text-align: center; color: white;">Copyright &copy; 2024 All rights reserved.Developed by Fitsum</p>
-</footer>
 </html>
