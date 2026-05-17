@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
         <div className="flex justify-center md:justify-start gap-4">
           {socialLinks.map((link, index) => (
-            <a key={index} href={link.url} target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl">
+            <a key={index} href={link.url} target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-light-surface dark:bg-dark-surface text-slate-700 dark:text-slate-200 shadow-md hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:-translate-y-1 transition-all text-xl">
               <i className={`bx ${link.icon}`}></i>
             </a>
           ))}
